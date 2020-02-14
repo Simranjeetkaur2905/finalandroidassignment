@@ -69,6 +69,8 @@ public class PlacesAdaptor extends ArrayAdapter {
 
         return view;
 
+        
+
     }
 
 //    private void loadPlaces(){
