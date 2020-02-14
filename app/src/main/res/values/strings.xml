@@ -2,8 +2,8 @@
     <string name="app_name">finallabassignment764937</string>
 
 
-    <string name="key">AIzaSyB45lwuNXNnXYsc3WHA1QyJKIkxqE-Rb7A</string>
-    <string name="api_key_places">AIzaSyB45lwuNXNnXYsc3WHA1QyJKIkxqE-Rb7A</string>
+    <string name="key"></string>
+    <string name="api_key_places"></string>
 
     <string-array name="typesofmaps">
         <item>Choose Map Type</item>
