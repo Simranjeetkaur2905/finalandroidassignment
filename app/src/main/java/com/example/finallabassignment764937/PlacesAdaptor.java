@@ -69,7 +69,7 @@ public class PlacesAdaptor extends ArrayAdapter {
 
         return view;
 
-        
+
 
     }
 

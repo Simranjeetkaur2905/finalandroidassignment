@@ -37,6 +37,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
@@ -48,6 +49,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     GoogleMap mMap;
+    Marker marker;
 
     private final int REQUEST_CODE = 1;
 
@@ -340,6 +342,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
                 fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper());
+                break;
+
+            case R.id.btn_clear:
+
+                if(marker != null)
+                    marker.remove();
+                mMap.clear();
+                initMap();
+                getUserLocation();
+
+                if(!checkPermission())
+                    requestPermission();
+                else
+                    fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper());
+
+
+
                 break;
 
             case R.id.btn_addfavrt:
